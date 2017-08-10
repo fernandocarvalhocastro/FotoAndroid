@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         JSONObject imovel = new JSONObject();
         try{
             byte[] val = IOUtils.toByteArray(new FileInputStream(caminhoImagem));
-            String code = Base64.encodeBase64String(val);
+            String code = android.util.Base64.encodeToString(val,android.util.Base64.DEFAULT);
             Log.i("IMOBILIARIA", "Img = " + code);
             imovel.put("proprietario","JOAO");
             imovel.put("imagem",code);
